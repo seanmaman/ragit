@@ -23,7 +23,7 @@ These instructions will get you a copy of the project up and running on your loc
 First, clone the repository to your local machine using the following command:
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/seanmaman/ragit>
 ```
 
 ### Installation
@@ -80,3 +80,4 @@ streamlit run gui.py
 ```
 
 Once the GUI is running, you can access it in your web browser at `http://localhost:8501`.
+
