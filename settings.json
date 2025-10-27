@@ -1,0 +1,15 @@
+{
+    "summarizer_model": "facebook/bart-large-cnn",
+    "whisper_model": "base",
+    "documents_dir": "documents",
+    "rag": {
+        "db_path": "./db",
+        "collection_name": "nttdocs",
+        "embed_model": "sentence-transformers/all-mpnet-base-v2",
+        "xembed_model": "sentence-transformers/multi-qa-mpnet-base-dot-v1",
+        "ollama_host": "http://localhost:11434",
+        "llm_model": "phi4",
+        "similarity_top_k": 3,
+        "request_timeout": 120
+    }
+}
