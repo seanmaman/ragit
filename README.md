@@ -1,83 +1,64 @@
-# ragIt™ - Your Personal AI Assistant - 2024
+# RAGit
 
-ragIt™ is an AI-powered assistant that uses a Retrieval-Augmented Generation (RAG) architecture to answer questions based on a local document knowledge base. It features a user-friendly web interface and can monitor a directory to automatically keep its knowledge up-to-date.
+GitHub Repository: https://github.com/seanmaman/ragit
 
-## Features
+## Overview
+RAGit is a document processing and retrieval system that uses RAG (Retrieval-Augmented Generation) technology.
 
--   **AI Assistant**: A powerful AI assistant that can answer questions about your documents.
--   **Web Interface**: A simple and intuitive web interface for interacting with the assistant.
--   **File Monitoring**: Monitors a directory for new or updated files and automatically adds them to the knowledge base.
--   **Source Citing**: Cites the sources of its answers, so you can easily verify the information.
+## Important: Documents Folder Setup
 
-## Getting Started
+The `documents/` folder needs to be populated with files for the system to work properly. You can add any type of files including:
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+- Text documents (.txt)
+- PDF files (.pdf)
+- Word documents (.docx, .doc)
+- Markdown files (.md)
+- Code files (.py, .js, .html, .css, etc.)
+- JSON files (.json)
+- CSV files (.csv)
+- Any other text-based or document files
 
-### Prerequisites
+**Note:** The system will automatically process and index all files placed in the `documents/` folder for retrieval and analysis.
 
--   [Python 3.x](https://www.python.org/downloads/)
--   [Git](https://git-scm.com/downloads)
+## Installation
 
-### Cloning the Repository
-
-First, clone the repository to your local machine using the following command:
-
+1. Clone the repository:
 ```bash
-git clone <https://github.com/seanmaman/ragit>
+git clone https://github.com/seanmaman/ragit.git
+cd ragit
 ```
 
-### Installation
-
-1.  Navigate to the project directory:
-
-    ```bash
-    cd ragit
-    ```
-
-2.  Create a virtual environment:
-
-    ```bash
-    python -m venv venv
-    ```
-
-3.  Activate the virtual environment:
-
-    -   On Windows:
-
-        ```bash
-        venv\Scripts\activate
-        ```
-
-    -   On macOS and Linux:
-        ```bash
-        source venv/bin/activate
-        ```
-
-4.  Install the required packages:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
+2. Install required dependencies:
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
 
-To use ragIt™, you need to run two separate scripts: `monitor.py` and `gui.py`.
-
-### Running the Monitor
-
-The `monitor.py` script monitors the `documents` directory for any file changes and updates the knowledge base accordingly. To run the monitor, use the following command:
-
+1. **Important:** Place your documents in the `documents/` folder
+2. Run the GUI application:
 ```bash
-python monitor.py
+python gui.py
 ```
 
-### Running the GUI
+Or use the batch files:
+- Windows: `run_gui.bat`
+- Monitor: `run_monitor.bat`
 
-The `gui.py` script runs the web interface, which you can use to interact with the AI assistant. To run the GUI, use the following command:
+## Project Structure
+- `gui.py` - Main GUI application
+- `monitor.py` - System monitor
+- `modules/` - Core modules for RAG functionality
+- `documents/` - **Place your documents here for processing (required)**
+- `db/` - Database storage for indexed documents
+- `competitors/` - Competitor analysis data
+- `settings.json` - Configuration settings
 
-```bash
-streamlit run gui.py
-```
+## Getting Started
 
-Once the GUI is running, you can access it in your web browser at `http://localhost:8501`.
+1. Ensure the `documents/` folder contains the files you want to process
+2. Run the application using one of the methods above
+3. The system will automatically index and process your documents
 
+## License
+See repository for license information.
